@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Side Navigation Bar with Curved Borders</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script src="https://kit.fontawesome.com/3c3a51bfad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="shadow"></div>
+	<div class="side_bar">
+		<div class="side_bar_top">
+			<div class="logo_wrap">
+				<a href="#">
+					<img src="LOGO.png" alt="logo" height="1000px" width="100px">
+					<span class="text">MR.KEVINZ</span></a>
+			</div>
+			<div class="side_bar_menu">
+				<div class="menu"><ion-icon class="i" name="arrow-forward-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<div class="side_bar_bottom">
+			<ul>
+				<li>
+					<span class="top_curve"></span>
+					<a href="index.html">
+						<span class="icon"><ion-icon name="home-sharp"></ion-icon>	</span>
+						<span class="item">Dashboard</span></a>
+					<span class="bottom_curve"></span>
+				</li>
+				<li>
+					<span class="top_curve"></span>
+					<a href="pomo.html">
+						<span class="icon"><ion-icon name="airplane-sharp"></ion-icon></span>
+						<span class="item">MEMORY GAME</span></a>
+					<span class="bottom_curve"></span>
+				</li>
+				<li>
+					<span class="top_curve"></span>
+					<a href="todo.html">
+						<span class="icon"><ion-icon name="wallet-sharp"></ion-icon></span>
+						<span class="item">TODO LIST</span></a>
+					<span class="bottom_curve"></span>
+				</li>
+				<li>
+					<span class="top_curve"></span>
+					<a href="alarm.html">
+						<span class="icon"><ion-icon name="newspaper-sharp"></ion-icon></span>
+						<span class="item">CLOCK</span></a>
+					<span class="bottom_curve"></span>
+				</li>
+				<li class="active">
+					<span class="sb.html"></span>
+					<a href="#">
+						<span class="icon"><ion-icon name="pie-chart-sharp"></ion-icon></span>
+						<span class="item">STUDY-HUB</span></a>
+					<span class="bottom_curve"></span>
+				</li>
+				<li>
+					<span class="top_curve"></span>
+					<a href="#">
+						<span class="icon"><ion-icon name="settings-sharp"></ion-icon></span>
+						<span class="item">Settings</span></a>
+					<span class="bottom_curve"></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+    <div class="main_container">
+		<center>
+<details style="background-color:rgb(241, 239, 236);padding:20px;margin:10px;cursor:grab;border-radius:0px 20px 20px 20px ;border-left:solid 3px rgb(68, 63, 64);border-bottom:solid 3px rgb(68, 63, 64);font-style:italic;font-weight: bolder;font-size:28px;">
+	<summary>REVISELY</summary>
+		<iframe src="https://www.revisely.com/flashcard-generator" allowfullscreen style="border: 0;margin:5px; width: 100%; height:700px;"></iframe>
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-7c8fb567-714f-4e39-a257-c2e99b838ebc" data-elfsight-app-lazy></div>
+
+</details></center>
+<center>
+	<details style="background-color:rgb(241, 239, 236);padding:20px;margin:10px;cursor:grab;border-radius:0px 20px 20px 20px ;border-left:solid 3px rgb(68, 63, 64);border-bottom:solid 3px rgb(68, 63, 64);font-style:italic;font-weight: bolder;font-size:28px;">
+		<summary>INFINITY META</summary>
+
+		<div id="container">
+			<iframe src="https://srichaitanyameta.com/Login" width="100%" height="700px"></iframe>
+			<div>
+				<p>USER ID:246123383</p>
+			  <button class="button"><ion-icon name="settings-sharp"></ion-icon>FULL SCREEN INFINITY META</button>
+			</div>
+		  
+			<div class="error"></div>
+		  </div> <script>var button = document.querySelector('#container .button');
+			button.addEventListener('click', fullscreen);
+			// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener. 
+			// so don't use it to detect exit fullscreen
+			document.addEventListener('keydown', function (e) {
+			  console.log('key press' + e.keyCode);
+			});
+			// detect enter or exit fullscreen mode
+			document.addEventListener('webkitfullscreenchange', fullscreenChange);
+			document.addEventListener('mozfullscreenchange', fullscreenChange);
+			document.addEventListener('fullscreenchange', fullscreenChange);
+			document.addEventListener('MSFullscreenChange', fullscreenChange);
+			
+			function fullscreen() {
+			  // check if fullscreen mode is available
+			  if (document.fullscreenEnabled || 
+				document.webkitFullscreenEnabled || 
+				document.mozFullScreenEnabled ||
+				document.msFullscreenEnabled) {
+				
+				// which element will be fullscreen
+				var iframe = document.querySelector('#container iframe');
+				// Do fullscreen
+				if (iframe.requestFullscreen) {
+				  iframe.requestFullscreen();
+				} else if (iframe.webkitRequestFullscreen) {
+				  iframe.webkitRequestFullscreen();
+				} else if (iframe.mozRequestFullScreen) {
+				  iframe.mozRequestFullScreen();
+				} else if (iframe.msRequestFullscreen) {
+				  iframe.msRequestFullscreen();
+				}
+			  }
+			  else {
+				document.querySelector('.error').innerHTML = 'Your browser is not supported';
+			  }
+			}
+			
+			function fullscreenChange() {
+			  if (document.fullscreenEnabled ||
+				   document.webkitIsFullScreen || 
+				   document.mozFullScreen ||
+				   document.msFullscreenElement) {
+				console.log('enter fullscreen');
+			  }
+			  else {
+				console.log('exit fullscreen');
+			  }
+			  // force to reload iframe once to prevent the iframe source didn't care about trying to resize the window
+			  // comment this line and you will see
+			  var iframe = document.querySelector('iframe');
+			  iframe.src = iframe.src;
+			}</script>
+	</details></center>
+
+	</div>
+</div>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
